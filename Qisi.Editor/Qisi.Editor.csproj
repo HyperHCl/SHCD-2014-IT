@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>F5A97DD2-77E0-451C-AC0B-C1FB867C1DEB</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Qisi.Editor</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Qisi.General" />
+    <Reference Include="Qisi.General.Controls" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Qisi.Editor.Controls\ColorEventArgs.cs" />
+    <Compile Include="Qisi.Editor.Controls\ExpressionEventArgs.cs" />
+    <Compile Include="Qisi.Editor.Controls\FLabel.cs" />
+    <Compile Include="Qisi.Editor.Controls\FLabelList.cs" />
+    <Compile Include="Qisi.Editor.Controls\FontEventArgs.cs" />
+    <Compile Include="Qisi.Editor.Controls\FormBlankInfo.cs" />
+    <Compile Include="Qisi.Editor.Controls\FormFlow.cs" />
+    <Compile Include="Qisi.Editor.Controls\FormFormatSelect.cs" />
+    <Compile Include="Qisi.Editor.Controls\FormOptionInfo.cs" />
+    <Compile Include="Qisi.Editor.Controls\FormulaEditor.cs" />
+    <Compile Include="Qisi.Editor.Controls\FrmInsertTable.cs" />
+    <Compile Include="Qisi.Editor.Controls\ImageEventArgs.cs" />
+    <Compile Include="Qisi.Editor.Controls\SuperBox.cs" />
+    <Compile Include="Qisi.Editor.Controls\TableEventArgs.cs" />
+    <Compile Include="Qisi.Editor.Controls\TextBar.cs" />
+    <Compile Include="Qisi.Editor.Controls\TextBox.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\CharInfo.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\DrawInfo.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\Element.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\ExpressionInfo.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\MemoryFile.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\OperationInfo.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\PictureInfo.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\Pic_Tab.cs" />
+    <Compile Include="Qisi.Editor.Documents.Elements\TableInfo.cs" />
+    <Compile Include="Qisi.Editor.Documents.Table\Cell.cs" />
+    <Compile Include="Qisi.Editor.Documents.Table\Column.cs" />
+    <Compile Include="Qisi.Editor.Documents.Table\Row.cs" />
+    <Compile Include="Qisi.Editor.Documents\Blank.cs" />
+    <Compile Include="Qisi.Editor.Documents\ContentType.cs" />
+    <Compile Include="Qisi.Editor.Documents\Document.cs" />
+    <Compile Include="Qisi.Editor.Documents\ImageAlign.cs" />
+    <Compile Include="Qisi.Editor.Documents\Line.cs" />
+    <Compile Include="Qisi.Editor.Documents\Option.cs" />
+    <Compile Include="Qisi.Editor.Documents\Options.cs" />
+    <Compile Include="Qisi.Editor.Documents\TrueOrFalse.cs" />
+    <Compile Include="Qisi.Editor.Documents\UnderLine.cs" />
+    <Compile Include="Qisi.Editor.Expression\arccos.cs" />
+    <Compile Include="Qisi.Editor.Expression\arccos_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\arccot.cs" />
+    <Compile Include="Qisi.Editor.Expression\arccot_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\arcsin.cs" />
+    <Compile Include="Qisi.Editor.Expression\arcsin_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\arctan.cs" />
+    <Compile Include="Qisi.Editor.Expression\arctan_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing11.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing12.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing13.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing14.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing15.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing21.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing22.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing23.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing24.cs" />
+    <Compile Include="Qisi.Editor.Expression\bing25.cs" />
+    <Compile Include="Qisi.Editor.Expression\charexpression.cs" />
+    <Compile Include="Qisi.Editor.Expression\chengji1.cs" />
+    <Compile Include="Qisi.Editor.Expression\chengji2.cs" />
+    <Compile Include="Qisi.Editor.Expression\chengji3.cs" />
+    <Compile Include="Qisi.Editor.Expression\chengji4.cs" />
+    <Compile Include="Qisi.Editor.Expression\chengji5.cs" />
+    <Compile Include="Qisi.Editor.Expression\chengmihao.cs" />
+    <Compile Include="Qisi.Editor.Expression\containerexpression.cs" />
+    <Compile Include="Qisi.Editor.Expression\cos.cs" />
+    <Compile Include="Qisi.Editor.Expression\cosh.cs" />
+    <Compile Include="Qisi.Editor.Expression\cosh_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\cos_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\cot.cs" />
+    <Compile Include="Qisi.Editor.Expression\coth.cs" />
+    <Compile Include="Qisi.Editor.Expression\coth_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\cot_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\csc.cs" />
+    <Compile Include="Qisi.Editor.Expression\csch.cs" />
+    <Compile Include="Qisi.Editor.Expression\csch_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\csc_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\daikuanggongshi.cs" />
+    <Compile Include="Qisi.Editor.Expression\dakuohao.cs" />
+    <Compile Include="Qisi.Editor.Expression\danbiandakuohao.cs" />
+    <Compile Include="Qisi.Editor.Expression\denghao1.cs" />
+    <Compile Include="Qisi.Editor.Expression\denghao2.cs" />
+    <Compile Include="Qisi.Editor.Expression\denghao3.cs" />
+    <Compile Include="Qisi.Editor.Expression\dexpression.cs" />
+    <Compile Include="Qisi.Editor.Expression\dh1.cs" />
+    <Compile Include="Qisi.Editor.Expression\dh2.cs" />
+    <Compile Include="Qisi.Editor.Expression\dh3.cs" />
+    <Compile Include="Qisi.Editor.Expression\dian.cs" />
+    <Compile Include="Qisi.Editor.Expression\dixian.cs" />
+    <Compile Include="Qisi.Editor.Expression\duanyinfuhao.cs" />
+    <Compile Include="Qisi.Editor.Expression\duihao.cs" />
+    <Compile Include="Qisi.Editor.Expression\ehuafu.cs" />
+    <Compile Include="Qisi.Editor.Expression\erchongjifen1.cs" />
+    <Compile Include="Qisi.Editor.Expression\erchongjifen2.cs" />
+    <Compile Include="Qisi.Editor.Expression\erchongjifen3.cs" />
+    <Compile Include="Qisi.Editor.Expression\expression.cs" />
+    <Compile Include="Qisi.Editor.Expression\fangkuohao.cs" />
+    <Compile Include="Qisi.Editor.Expression\fenshi.cs" />
+    <Compile Include="Qisi.Editor.Expression\fenzuzifuzaishang.cs" />
+    <Compile Include="Qisi.Editor.Expression\fenzuzifuzaixia.cs" />
+    <Compile Include="Qisi.Editor.Expression\FType.cs" />
+    <Compile Include="Qisi.Editor.Expression\fuji1.cs" />
+    <Compile Include="Qisi.Editor.Expression\fuji2.cs" />
+    <Compile Include="Qisi.Editor.Expression\fuji3.cs" />
+    <Compile Include="Qisi.Editor.Expression\fuji4.cs" />
+    <Compile Include="Qisi.Editor.Expression\fuji5.cs" />
+    <Compile Include="Qisi.Editor.Expression\genshi.cs" />
+    <Compile Include="Qisi.Editor.Expression\hanshu.cs" />
+    <Compile Include="Qisi.Editor.Expression\hanshushangbiao.cs" />
+    <Compile Include="Qisi.Editor.Expression\hanshuxiabiao.cs" />
+    <Compile Include="Qisi.Editor.Expression\henggang.cs" />
+    <Compile Include="Qisi.Editor.Expression\imageexpression.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiankuohao.cs" />
+    <Compile Include="Qisi.Editor.Expression\jianyinfuhao.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao11.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao12.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao13.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao14.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao15.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao21.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao22.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao23.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao24.cs" />
+    <Compile Include="Qisi.Editor.Expression\jiao25.cs" />
+    <Compile Include="Qisi.Editor.Expression\jifen1.cs" />
+    <Compile Include="Qisi.Editor.Expression\jifen2.cs" />
+    <Compile Include="Qisi.Editor.Expression\jifen3.cs" />
+    <Compile Include="Qisi.Editor.Expression\jueduizhi1.cs" />
+    <Compile Include="Qisi.Editor.Expression\jueduizhi2.cs" />
+    <Compile Include="Qisi.Editor.Expression\juzheng.cs" />
+    <Compile Include="Qisi.Editor.Expression\kuohao.cs" />
+    <Compile Include="Qisi.Editor.Expression\kuohaoexpression.cs" />
+    <Compile Include="Qisi.Editor.Expression\lg.cs" />
+    <Compile Include="Qisi.Editor.Expression\lifanggen.cs" />
+    <Compile Include="Qisi.Editor.Expression\lim.cs" />
+    <Compile Include="Qisi.Editor.Expression\lineexpression.cs" />
+    <Compile Include="Qisi.Editor.Expression\ln.cs" />
+    <Compile Include="Qisi.Editor.Expression\log.cs" />
+    <Compile Include="Qisi.Editor.Expression\logx.cs" />
+    <Compile Include="Qisi.Editor.Expression\max.cs" />
+    <Compile Include="Qisi.Editor.Expression\mianjifen1.cs" />
+    <Compile Include="Qisi.Editor.Expression\mianjifen2.cs" />
+    <Compile Include="Qisi.Editor.Expression\mianjifen3.cs" />
+    <Compile Include="Qisi.Editor.Expression\min.cs" />
+    <Compile Include="Qisi.Editor.Expression\pingfanggen.cs" />
+    <Compile Include="Qisi.Editor.Expression\qiuhe1.cs" />
+    <Compile Include="Qisi.Editor.Expression\qiuhe2.cs" />
+    <Compile Include="Qisi.Editor.Expression\qiuhe3.cs" />
+    <Compile Include="Qisi.Editor.Expression\qiuhe4.cs" />
+    <Compile Include="Qisi.Editor.Expression\qiuhe5.cs" />
+    <Compile Include="Qisi.Editor.Expression\sanchongjifen1.cs" />
+    <Compile Include="Qisi.Editor.Expression\sanchongjifen2.cs" />
+    <Compile Include="Qisi.Editor.Expression\sanchongjifen3.cs" />
+    <Compile Include="Qisi.Editor.Expression\sandian.cs" />
+    <Compile Include="Qisi.Editor.Expression\sec.cs" />
+    <Compile Include="Qisi.Editor.Expression\sech.cs" />
+    <Compile Include="Qisi.Editor.Expression\sech_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\sec_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\shangbiao.cs" />
+    <Compile Include="Qisi.Editor.Expression\shangfangdakuohao.cs" />
+    <Compile Include="Qisi.Editor.Expression\shangxiabiaoyou.cs" />
+    <Compile Include="Qisi.Editor.Expression\shangxiabiaozuo.cs" />
+    <Compile Include="Qisi.Editor.Expression\shuangdian.cs" />
+    <Compile Include="Qisi.Editor.Expression\shuangdingxian.cs" />
+    <Compile Include="Qisi.Editor.Expression\shuangxiangjiantou1.cs" />
+    <Compile Include="Qisi.Editor.Expression\shuangxiangjiantou2.cs" />
+    <Compile Include="Qisi.Editor.Expression\shuangxiangjiantou3.cs" />
+    <Compile Include="Qisi.Editor.Expression\shuangxiangjiantouzaishang.cs" />
+    <Compile Include="Qisi.Editor.Expression\sin.cs" />
+    <Compile Include="Qisi.Editor.Expression\sinh.cs" />
+    <Compile Include="Qisi.Editor.Expression\sinh_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\sin_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\specialchar.cs" />
+    <Compile Include="Qisi.Editor.Expression\structexpression.cs" />
+    <Compile Include="Qisi.Editor.Expression\tan.cs" />
+    <Compile Include="Qisi.Editor.Expression\tanh.cs" />
+    <Compile Include="Qisi.Editor.Expression\tanh_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\tan_2.cs" />
+    <Compile Include="Qisi.Editor.Expression\tijifen1.cs" />
+    <Compile Include="Qisi.Editor.Expression\tijifen2.cs" />
+    <Compile Include="Qisi.Editor.Expression\tijifen3.cs" />
+    <Compile Include="Qisi.Editor.Expression\type1.cs" />
+    <Compile Include="Qisi.Editor.Expression\type2.cs" />
+    <Compile Include="Qisi.Editor.Expression\type3.cs" />
+    <Compile Include="Qisi.Editor.Expression\type4.cs" />
+    <Compile Include="Qisi.Editor.Expression\type5.cs" />
+    <Compile Include="Qisi.Editor.Expression\weidao1.cs" />
+    <Compile Include="Qisi.Editor.Expression\weidao2.cs" />
+    <Compile Include="Qisi.Editor.Expression\weidao3.cs" />
+    <Compile Include="Qisi.Editor.Expression\xiabiao.cs" />
+    <Compile Include="Qisi.Editor.Expression\xiafangdakuohao.cs" />
+    <Compile Include="Qisi.Editor.Expression\xiefenshi.cs" />
+    <Compile Include="Qisi.Editor.Expression\yiyinfuhao.cs" />
+    <Compile Include="Qisi.Editor.Expression\youjiantou1.cs" />
+    <Compile Include="Qisi.Editor.Expression\youjiantou2.cs" />
+    <Compile Include="Qisi.Editor.Expression\youjiantou3.cs" />
+    <Compile Include="Qisi.Editor.Expression\youjiantouzaishang.cs" />
+    <Compile Include="Qisi.Editor.Expression\youxiangjianshijiantouzaishang.cs" />
+    <Compile Include="Qisi.Editor.Expression\zuojiantou1.cs" />
+    <Compile Include="Qisi.Editor.Expression\zuojiantou2.cs" />
+    <Compile Include="Qisi.Editor.Expression\zuojiantou3.cs" />
+    <Compile Include="Qisi.Editor.Expression\zuojiantouzaishang.cs" />
+    <Compile Include="Qisi.Editor.Expression\zuoxiangjianshijiantouzaishang.cs" />
+    <Compile Include="Qisi.Editor.Properties\Resources.cs" />
+    <Compile Include="Qisi.Editor.Properties\Settings.cs" />
+    <Compile Include="Qisi.Editor\CommonMethods.cs" />
+    <Compile Include="Qisi.Editor\NativeMethods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Qisi.Editor.Controls\FLabel.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\FormBlankInfo.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\FormFlow.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\FormFormatSelect.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\FormOptionInfo.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\FormulaEditor.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\FrmInsertTable.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\SuperBox.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\TextBar.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Controls\TextBox.resources" />
+    <EmbeddedResource Include="Qisi.Editor.Properties\Resources.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

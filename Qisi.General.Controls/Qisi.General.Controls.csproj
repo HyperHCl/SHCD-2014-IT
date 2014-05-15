@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>858CDFCC-1954-4E3E-94DE-B988FC59DB7D</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Qisi.General.Controls</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreAudioApi.Interfaces\AUDIO_VOLUME_NOTIFICATION_DATA.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\Blob.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\CLSCTX.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\EStgmAccess.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IAudioEndpointVolume.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IAudioEndpointVolumeCallback.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IAudioMeterInformation.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IAudioSessionControl2.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IAudioSessionEnumerator.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IAudioSessionEvents.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IAudioSessionManager2.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IMMDevice.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IMMDeviceCollection.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IMMDeviceEnumerator.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IMMEndpoint.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\IPropertyStore.cs" />
+    <Compile Include="CoreAudioApi.Interfaces\ISimpleAudioVolume.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolume.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeCallback.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeChannel.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeChannels.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeNotificationDelegate.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeStepInformation.cs" />
+    <Compile Include="CoreAudioApi\AudioEndPointVolumeVolumeRange.cs" />
+    <Compile Include="CoreAudioApi\AudioMeterInformation.cs" />
+    <Compile Include="CoreAudioApi\AudioMeterInformationChannels.cs" />
+    <Compile Include="CoreAudioApi\AudioSessionControl.cs" />
+    <Compile Include="CoreAudioApi\AudioSessionDisconnectReason.cs" />
+    <Compile Include="CoreAudioApi\AudioSessionManager.cs" />
+    <Compile Include="CoreAudioApi\AudioSessionState.cs" />
+    <Compile Include="CoreAudioApi\AudioVolumeNotificationData.cs" />
+    <Compile Include="CoreAudioApi\EDataFlow.cs" />
+    <Compile Include="CoreAudioApi\EDeviceState.cs" />
+    <Compile Include="CoreAudioApi\EEndpointHardwareSupport.cs" />
+    <Compile Include="CoreAudioApi\ERole.cs" />
+    <Compile Include="CoreAudioApi\MMDevice.cs" />
+    <Compile Include="CoreAudioApi\MMDeviceCollection.cs" />
+    <Compile Include="CoreAudioApi\MMDeviceEnumerator.cs" />
+    <Compile Include="CoreAudioApi\PKEY.cs" />
+    <Compile Include="CoreAudioApi\PropertyKey.cs" />
+    <Compile Include="CoreAudioApi\PropertyStore.cs" />
+    <Compile Include="CoreAudioApi\PropertyStoreProperty.cs" />
+    <Compile Include="CoreAudioApi\PropVariant.cs" />
+    <Compile Include="CoreAudioApi\SessionCollection.cs" />
+    <Compile Include="CoreAudioApi\SimpleAudioVolume.cs" />
+    <Compile Include="CoreAudioApi\_MMDeviceEnumerator.cs" />
+    <Compile Include="Qisi.General.Controls.Properties\Resources.cs" />
+    <Compile Include="Qisi.General.Controls\animateImage.cs" />
+    <Compile Include="Qisi.General.Controls\Clock.cs" />
+    <Compile Include="Qisi.General.Controls\CrystalButton.cs" />
+    <Compile Include="Qisi.General.Controls\CrystalButtonLeftRight.cs" />
+    <Compile Include="Qisi.General.Controls\CrystalButtonUpDown.cs" />
+    <Compile Include="Qisi.General.Controls\DataGridViewAutoFilterColumnHeaderCell.cs" />
+    <Compile Include="Qisi.General.Controls\DataGridViewAutoFilterTextAndPictureBoxColumn.cs" />
+    <Compile Include="Qisi.General.Controls\DataGridViewAutoFilterTextBoxColumn.cs" />
+    <Compile Include="Qisi.General.Controls\FlatMessageBox.cs" />
+    <Compile Include="Qisi.General.Controls\imeBar.cs" />
+    <Compile Include="Qisi.General.Controls\ImeModeEventArgs.cs" />
+    <Compile Include="Qisi.General.Controls\NativeMethods.cs" />
+    <Compile Include="Qisi.General.Controls\PopupHost.cs" />
+    <Compile Include="Qisi.General.Controls\QisiTabControl.cs" />
+    <Compile Include="Qisi.General.Controls\QisiTreeView.cs" />
+    <Compile Include="Qisi.General.Controls\ReadOnlyRichTextBox.cs" />
+    <Compile Include="Qisi.General.Controls\StartForm.cs" />
+    <Compile Include="Qisi.General.Controls\TextAndImageCell.cs" />
+    <Compile Include="Qisi.General.Controls\VolumeControl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Qisi.General.Controls.Properties\Resources.resources" />
+    <EmbeddedResource Include="Qisi.General.Controls\CrystalButton.resources" />
+    <EmbeddedResource Include="Qisi.General.Controls\imeBar.resources" />
+    <EmbeddedResource Include="Qisi.General.Controls\StartForm.resources" />
+    <EmbeddedResource Include="Qisi.General.Controls\VolumeControl.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
