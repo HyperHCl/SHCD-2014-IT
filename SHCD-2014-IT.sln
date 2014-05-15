@@ -51,6 +51,7 @@ Global
 		$1.DirectoryNamespaceAssociation = Hierarchical
 		$1.ResourceNamePolicy = FileName
 		$0.TextStylePolicy = $2
+		$2.EolMarker = Windows
 		$2.inheritsSet = Mono
 		$2.inheritsScope = text/plain
 		$2.scope = text/x-csharp
@@ -59,6 +60,7 @@ Global
 		$3.inheritsScope = text/x-csharp
 		$3.scope = text/x-csharp
 		$0.TextStylePolicy = $4
+		$4.EolMarker = Windows
 		$4.inheritsSet = Mono
 		$4.inheritsScope = text/plain
 		$4.scope = text/plain

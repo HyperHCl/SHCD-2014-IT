@@ -28,6 +28,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICSharpCode.SharpZipLib.Checksums\Adler32.cs" />
@@ -121,7 +122,6 @@
     <Compile Include="Qisi.General\BoolIndexEventArgs.cs" />
     <Compile Include="Qisi.General\CommonMethods.cs" />
     <Compile Include="Qisi.General\FTPClient.cs" />
-    <Compile Include="Qisi.General\FTPServer.cs" />
     <Compile Include="Qisi.General\IndexEventArgs.cs" />
     <Compile Include="Qisi.General\IniSection.cs" />
     <Compile Include="Qisi.General\MemoryIniFile.cs" />
@@ -129,6 +129,7 @@
     <Compile Include="Qisi.General\MessageEventHandler.cs" />
     <Compile Include="Qisi.General\User.cs" />
     <Compile Include="Qisi.General\UserSeesion.cs" />
+    <Compile Include="Qisi.General\FTPServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Qisi.General.Properties\Resources.resources" />

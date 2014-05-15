@@ -1,4 +1,4 @@
-SHCD-2014-InformationTech
+SHCD-2014-InfoTech
 ====
 The decompiled application of the mock exam system.
 

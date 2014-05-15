@@ -1,16 +1,6 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Qisi.Editor/Qisi.Editor.Controls/FormBlankInfo.cs">
-    <Files>
-      <File FileName="MainApp/SHCD/Program.cs" Line="431" Column="46" />
-      <File FileName="Qisi.General.Controls/CoreAudioApi/_MMDeviceEnumerator.cs" Line="11" Column="36" />
-      <File FileName="Qisi.General.Controls/Qisi.General.Controls/DataGridViewAutoFilterColumnHeaderCell.cs" Line="571" Column="6" />
-      <File FileName="Qisi.General/ICSharpCode.SharpZipLib.Zip/ZipEntry.cs" Line="548" Column="7" />
-      <File FileName="Qisi.General/Qisi.General/FTPServer.cs" Line="150" Column="47" />
-      <File FileName="Qisi.Editor/Qisi.Editor.Documents/Document.cs" Line="2962" Column="41" />
-      <File FileName="Qisi.Editor/Qisi.Editor.Controls/FormBlankInfo.cs" Line="2" Column="7" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

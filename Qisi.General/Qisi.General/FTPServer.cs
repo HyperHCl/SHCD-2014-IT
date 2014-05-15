@@ -9,6 +9,16 @@ namespace Qisi.General
 {
 	public class FTPServer
 	{
+		private void AddInfo(string str)
+		{
+			try
+			{
+				this.Log(this, new MessageEventArgs(str));
+			}
+			catch
+			{
+			}
+		}
 		public delegate void TextEventHandler(object sender, MessageEventArgs e);
 		private TcpListener myTcpListener = null;
 		private Thread listenThread;
@@ -18,9 +28,9 @@ namespace Qisi.General
 		public event FTPServer.TextEventHandler Log;
 		public FTPServer()
 		{
-			this.users = new Dictionary<string, string>();
-			this.users.Add("KeysAdmin", "Keys1009");
-			this.FTPRoot = Environment.SystemDirectory;
+			FTPClient.users = new Dictionary<string, string>();
+			FTPClient.users.Add("KeysAdmin", "Keys1009");
+			this.FTPRoot = Environment.SßystemDirectory;
 			ThreadPool.SetMaxThreads(1000, 1000);
 			ThreadPool.SetMinThreads(1000, 1000);
 		}
