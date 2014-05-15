@@ -520,7 +520,7 @@ namespace ICSharpCode.SharpZipLib.Zip
 			this.externalFileAttributes = -1;
 			this.method = CompressionMethod.Deflated;
 			this.zipFileIndex = -1L;
-			base..ctor();
+			// public ctor() : base(); // base..ctor() is referencing the .ctor() method in the base class. However this doesn't compile.
 			if (name == null)
 			{
 				throw new ArgumentNullException("name");
@@ -545,7 +545,7 @@ namespace ICSharpCode.SharpZipLib.Zip
 			this.externalFileAttributes = -1;
 			this.method = CompressionMethod.Deflated;
 			this.zipFileIndex = -1L;
-			base..ctor();
+			// public ctor() : base();
 			if (entry == null)
 			{
 				throw new ArgumentNullException("entry");

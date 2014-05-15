@@ -8,6 +8,7 @@ namespace CoreAudioApi
 	internal class _MMDeviceEnumerator
 	{
 		[MethodImpl(MethodImplOptions.InternalCall)]
+		// Hey, What are you doing, ILSpy?
 		public extern _MMDeviceEnumerator();
 	}
 }

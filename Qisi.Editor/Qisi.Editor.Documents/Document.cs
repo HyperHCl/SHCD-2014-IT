@@ -887,19 +887,19 @@ namespace Qisi.Editor.Documents
 			}
 			foreach (Option option in options.OptionList)
 			{
-				Option option;
-				option.Width = 0f;
-				option.Region.MakeEmpty();
+				Option option1;
+				option1.Width = 0f;
+				option1.Region.MakeEmpty();
 				for (int i = option.StartIndex; i < option.StartIndex + option.Count; i++)
 				{
-					option.Width += this.Elements[i].Size.Width;
+					option1.Width += this.Elements[i].Size.Width;
 				}
 			}
 			bool flag = true;
 			foreach (Option option in options.OptionList)
 			{
-				Option option;
-				if (option.Width + option.Font.Size * 3f > this.docWidth / (float)options.OptionList.Count)
+				Option option2;
+				if (option2.Width + option.Font.Size * 3f > this.docWidth / (float)options.OptionList.Count)
 				{
 					flag = false;
 					break;
@@ -949,8 +949,8 @@ namespace Qisi.Editor.Documents
 				bool flag2 = true;
 				foreach (Option option in options.OptionList)
 				{
-					Option option;
-					if (option.Width + option.Font.Size * 3f > this.docWidth / 2f)
+					Option option3;
+					if (option3.Width + option3.Font.Size * 3f > this.docWidth / 2f)
 					{
 						flag2 = false;
 						break;
@@ -2030,14 +2030,14 @@ namespace Qisi.Editor.Documents
 			}
 			foreach (Options options in this.optionss)
 			{
-				Options options;
-				if (options.Randomized)
+				Options options4;
+				if (options4.Randomized)
 				{
-					int startIndex = options.StartIndex;
+					int startIndex = options4.StartIndex;
 					int l = options.Count;
 					List<Element> list = new List<Element>();
 					List<Option> list2 = new List<Option>();
-					list2.AddRange(options.OptionList);
+					list2.AddRange(options4.OptionList);
 					while (l > 0)
 					{
 						list.Add(this.elements[startIndex]);
@@ -2046,8 +2046,8 @@ namespace Qisi.Editor.Documents
 					}
 					long ticks = DateTime.Now.Ticks;
 					Random random = new Random((int)(ticks & (long)((ulong)-1)) | (int)(ticks >> 32));
-					options.OptionList = new List<Option>();
-					options.RandOrder = "";
+					options4.OptionList = new List<Option>();
+					options4.RandOrder = "";
 					for (int k = 0; k < list2.Count; k++)
 					{
 						Option option = list2[k];
@@ -2904,19 +2904,19 @@ namespace Qisi.Editor.Documents
 			}
 			foreach (Element element in this.elements)
 			{
-				Element element;
-				if (element is OperationInfo)
+				Element element1;
+				if (element1 is OperationInfo)
 				{
 					string text2;
-					if ((element as OperationInfo).Opened)
+					if ((element1 as OperationInfo).Opened)
 					{
-						text2 = (element as OperationInfo).OperationID + ".zip";
+						text2 = (element1 as OperationInfo).OperationID + ".zip";
 					}
 					else
 					{
 						text2 = "";
 					}
-					list.Add(element.Index);
+					list.Add(element1.Index);
 					list2.Add(text2);
 				}
 			}
@@ -2942,10 +2942,10 @@ namespace Qisi.Editor.Documents
 			}
 			foreach (Element element in this.Elements)
 			{
-				Element element;
-				if (element is TableInfo)
+				Element element2;
+				if (element2 is TableInfo)
 				{
-					TableInfo tableInfo = element as TableInfo;
+					TableInfo tableInfo = element2 as TableInfo;
 					foreach (Cell current3 in tableInfo.Items)
 					{
 						string text2 = current3.getContentXml();
@@ -2957,9 +2957,9 @@ namespace Qisi.Editor.Documents
 				}
 				else
 				{
-					if (element is PictureInfo)
+					if (element2 is PictureInfo)
 					{
-						PictureInfo pictureInfo = element as PictureInfo;
+						PictureInfo pictureInfo = element2 as PictureInfo;
 						foreach (Document current4 in pictureInfo.Documents)
 						{
 							string text2 = current4.getContentXml();

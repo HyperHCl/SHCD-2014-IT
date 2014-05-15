@@ -146,9 +146,11 @@ namespace Qisi.General
 					{
 						goto IL_3B9;
 					}
-					if (<PrivateImplementationDetails>{544CA684-E25C-441E-8A25-D0A1091DD06C}.$$method0x600003e-1 == null)
+						// This is actually a switch. .NET compilers use Dictionary<string,int32>::TryGetValue to optimize for better performance.
+						// Well this is some kinds of fscking...
+						if (<PrivateImplementationDetails>{544CA684-E25C-441E-8A25-D0A1091DD06C}.$$method0x600003e-1 == null)
 					{
-						<PrivateImplementationDetails>{544CA684-E25C-441E-8A25-D0A1091DD06C}.$$method0x600003e-1 = new Dictionary<string, int>(15)
+							<PrivateImplementationDetails>{544CA684-E25C-441E-8A25-D0A1091DD06C}.$$method0x600003e-1 = new Dictionary<string, int>(15)
 						{
 
 							{

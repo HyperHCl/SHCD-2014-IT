@@ -1,3 +1,4 @@
+// Program.cs: The SHCD Core
 using Microsoft.Win32;
 using Qisi.General.Controls;
 using System;
@@ -43,19 +44,7 @@ namespace SHCD
 				FlatMessageBox.Show("程序已经在运行！", "错误", FlatMessageBox.KeysButtons.OK, FlatMessageBox.KeysIcon.Error);
 			}
 			else
-			{
-				if (Environment.OSVersion.Version.Major >= 6)
-				{
-					RegistryKey registryKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System");
-					if (registryKey != null)
-					{
-						if ((int)registryKey.GetValue("EnableLUA", 1) != 0)  // What is the fscking point? You guys has ALREAEDY requested admin privileges!
-						{
-							FlatMessageBox.Show("请在控制面板->用户帐户和家庭安全->用户帐户中将“用户账户控制设置”更改为“从不通知”，并重新启动后，再运行本程序。", "错误", FlatMessageBox.KeysButtons.OK, FlatMessageBox.KeysIcon.Error);
-							return;
-						}
-					}
-				}
+			{ // UAC Checking Deleted.
 				new StartForm
 				{
 					OpacityIncreaseMilliseconds = 500,
@@ -106,7 +95,9 @@ namespace SHCD
 				string tempPath;
 				try
 				{
-					tempPath = Path.GetTempPath();
+					tempPath = Path.GetTempPath(); // In Windows, this returns %windir%\temp so it would cause permission issues, as described in the following error meaasge.
+					// However, in Linux this returns /tmp and in OS X this returns /private/var/folders/something-here. There shouldn't be permission issues then.
+					// So, TODO: hack for Windows so this returns the user temp dir. 
 				}
 				catch (SecurityException) // Again. You ARE requiring the user to RUN as admin!
 				{
@@ -146,7 +137,7 @@ namespace SHCD
 				Program.answerDir = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 				if (!Directory.Exists(Program.answerDir))
 				{
-					string message;
+					string message; // Well, how about using just $HOME/SHCD-2014-IT?
 					if (Environment.OSVersion.Version.Major >= 0)
 					{
 						message = "没有找到当前用户的“文档”文件夹。";
@@ -176,9 +167,10 @@ namespace SHCD
 					{
 						string text2 = Environment.GetEnvironmentVariable("USERPROFILE") + "\\SHCD.ini";
 						string text3 = "";
-						bool flag2 = false;
+						bool unregistered = false;
 						try
 						{
+							// Generate the user hash-code for the key checking.
 							text3 = File.ReadAllText(Environment.GetEnvironmentVariable("USERPROFILE") + "\\SHCD.ini");
 						}
 						catch
@@ -188,20 +180,20 @@ namespace SHCD
 						finally
 						{
 							byte[] bytes = Convert.FromBase64String(text3);
-							text3 = Encoding.ASCII.GetString(bytes);
+							text3 = Encoding.ASCII.GetString(bytes); // Finally here comes the pseudo-hash
 							if (text3.Length < 34)
 							{
-								flag2 = true;
+								unregistered = true;
 							}
 							else
 							{
 								string text4 = text3.Substring(0, 18);
 								string text5 = text3.Substring(18, 8);
 								string a = text3.Substring(26, 8);
-								flag2 = !Program.CheckListCode(text4);
+								unregistered = !Program.CheckListCode(text4);
 								if (text5 != Program.doString(Program.getCpuId()) + Program.doString(Program.getBaseBoardId()) + Program.doString(Program.getBIOSId()) + Program.doString(Program.getPhysicalMediaId()))
 								{
-									flag2 = true;
+									unregistered = true;
 								}
 								int[] array = new int[8];
 								for (int i = 0; i < text5.Length; i++)
@@ -217,11 +209,11 @@ namespace SHCD
 								num = 100000000 - num;
 								if (a != (Convert.ToInt64(text4.Substring(2)) % (long)num).ToString().PadLeft(8, '0'))
 								{
-									flag2 = true;
+									unregistered = true;
 								}
 							}
 						}
-						if (flag2)
+						if (unregistered)
 						{
 							FormReg formReg = new FormReg();
 							if (formReg.ShowDialog() != DialogResult.OK)
@@ -232,7 +224,7 @@ namespace SHCD
 					}
 					string text6 = "";
 					DriveInfo[] drives = DriveInfo.GetDrives();
-					DriveInfo driveInfo = new DriveInfo("C");
+					DriveInfo driveInfo = new DriveInfo("C"); // Ouch....
 					DriveInfo[] array2 = drives;
 					for (int j = 0; j < array2.Length; j++)
 					{
@@ -436,7 +428,7 @@ namespace SHCD
 			}
 			return result;
 		}
-		internal static string getCpuId()
+		internal static string getCpuId() // Well..
 		{
 			string result;
 			try

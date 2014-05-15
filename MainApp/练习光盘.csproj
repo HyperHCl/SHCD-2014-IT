@@ -8,6 +8,8 @@
     <AssemblyName>练习光盘</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <WarningLevel>4</WarningLevel>
+    <Description>The launcher and regkey checker.</Description>
+    <RootNamespace>SHCD</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,18 +53,42 @@
     <Compile Include="SHCD\upload.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SHCD.Properties\Resources.resources" />
-    <EmbeddedResource Include="SHCD\ChooseSubject.resources" />
-    <EmbeddedResource Include="SHCD\CountDown.resources" />
-    <EmbeddedResource Include="SHCD\FormReg.resources" />
-    <EmbeddedResource Include="SHCD\FormSel.resources" />
-    <EmbeddedResource Include="SHCD\FormTemplate.resources" />
-    <EmbeddedResource Include="SHCD\Key.resources" />
-    <EmbeddedResource Include="SHCD\Login.resources" />
-    <EmbeddedResource Include="SHCD\MdiBase.resources" />
-    <EmbeddedResource Include="SHCD\score.resources" />
-    <EmbeddedResource Include="SHCD\Test.resources" />
-    <EmbeddedResource Include="SHCD\upload.resources" />
+    <EmbeddedResource Include="SHCD.Properties\Resources.resources">
+      <LogicalName>SHCD.Properties.Resources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\ChooseSubject.resources">
+      <LogicalName>SHCD.ChooseSubject.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\CountDown.resources">
+      <LogicalName>SHCD.CountDown.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\FormReg.resources">
+      <LogicalName>SHCD.FormReg.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\FormSel.resources">
+      <LogicalName>SHCD.FormSel.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\FormTemplate.resources">
+      <LogicalName>SHCD.FormTemplate.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\Key.resources">
+      <LogicalName>SHCD.Key.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\Login.resources">
+      <LogicalName>SHCD.Login.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\MdiBase.resources">
+      <LogicalName>SHCD.MdiBase.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\score.resources">
+      <LogicalName>SHCD.score.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\Test.resources">
+      <LogicalName>SHCD.Test.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHCD\upload.resources">
+      <LogicalName>SHCD.upload.resources</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
